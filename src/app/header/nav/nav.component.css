@@ -1,0 +1,14 @@
+
+.list {
+    list-style: none;
+    padding-top: 9%;
+}
+
+.list li, a {
+    display: inline;
+    font-size: 20pt;;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+}

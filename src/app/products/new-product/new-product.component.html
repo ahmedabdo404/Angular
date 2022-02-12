@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="newProduct" class="mt-3" action="/Products">
+            <h1 class="text-primary text-center mb-4">new-product</h1>
+            <div class="form-group d-flex justify-content-between">
+                <label for="id">ID</label>
+                <input type="number" step="1" min="7" placeholder="ID" formControlName="id" name="id" id="id">
+            </div>
+            <p class="text-success" [hidden]="id.invalid">OK</p>
+            <p class="text-danger" [hidden]="id.valid || id.pristine">The minimum id is 7</p>
+
+            <div class="form-group d-flex justify-content-between">
+                <label for="Title">Title</label>
+                <input type="text" placeholder="Title" formControlName="Title"name="Title" id="Title">
+            </div>
+            <p class="text-success" [hidden]="Title.invalid">OK</p>
+            <p class="text-danger" [hidden]="Title.valid || Title.pristine">The minimum length is 3</p>
+
+            <div class="form-group d-flex justify-content-between">
+                <label for="src">source</label>
+                <input type="text" placeholder="source" formControlName="src" name="src" id="src">
+            </div>
+            <p class="text-success" [hidden]="src.invalid">OK</p>
+            <p class="text-danger" [hidden]="src.valid || src.pristine">The source is required</p>
+
+            <div class="form-group d-flex justify-content-between">
+                <label for="des">description</label>
+                <input type="text" placeholder="description" formControlName="des" name="des" id="des">
+            </div>
+            <p class="text-success" [hidden]="des.invalid">OK</p>
+            <p class="text-danger" [hidden]="des.valid || des.pristine">The minimum length is 3</p>
+
+            <div class="form-group text-center mt-3">
+                <input type="submit" value="Add" [disabled]="newProduct.invalid" [routerLink]="['/Products']"
+                    class="btn btn-primary p-1 ps-3 pe-3" style="border-radius: 25px;" (click)="Save(newProduct.value)">
+                <a type="button" class="btn btn-secondary text-white ms-2" [routerLink]="['/Products']"
+                style="border-radius: 25px;">
+                    Back to Products</a>
+            </div>
+
+        </form>
+        <!-- {{user|json}} -->
+    </div>
+</div>

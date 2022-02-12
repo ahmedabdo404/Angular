@@ -1,0 +1,17 @@
+/* label {
+    text-align: center;
+} */
+.form-group{
+    width: 28em;
+    margin-top: 0.5rem;
+}
+
+input:not(input[type="submit"]){
+    width: 400px
+}
+
+p {
+    padding-left: 103px;
+    margin: 0;
+    margin-top: 9px;
+}

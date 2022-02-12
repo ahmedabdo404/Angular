@@ -1,0 +1,23 @@
+ul {
+    font-size: 25pt;
+    font-weight: bold;
+    
+}
+
+/* ul:nth-child(1){
+    color: red;
+}
+
+ul:nth-child(2){
+    color: tomato;
+}
+
+ul:nth-child(3){
+    color: purple;
+} */
+
+li {
+    color: rgb(59, 59, 59);
+    font-size: 15pt;
+    font-weight: lighter;
+}

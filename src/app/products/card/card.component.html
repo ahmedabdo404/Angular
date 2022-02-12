@@ -1,0 +1,9 @@
+<div class="card m-1 mt-3">
+    <img class="card-img-top" (click)="addtofavorite(product)" [src]="product.src" alt="Card image cap" style="cursor: pointer;">
+    <div class="card-body p-2">
+        <h1>Id: {{product.id}}</h1>
+        <h2>Title: {{product.Title}}</h2>
+        <p class="card-text">Des: {{product.des | slice:0:60}}</p>
+        <a type="button" class="btn btn-primary text-white" [routerLink]="['/Pdetails',product.id]">Details</a>
+    </div>
+</div>

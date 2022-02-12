@@ -1,0 +1,36 @@
+<!-- <div #ele>{{text}}
+</div> -->
+
+<div id="div0" class=container>
+    <!-- <input type="text" id="username" name="text" #username (input)="Addtext($event)"><br>
+    <input type="button" value="Add" id="Add" (click)="Add(username.value)"> -->
+    <input type="text" id="username" name="text" #username  placeholder="add"  (keyup.enter)="AddItem(username.value)" (keydown.Backspace)="delText(username.value)" (input)="Addtext($event)"><br>
+    <input type="text" id="username" name="text" #filter placeholder="filter" (keyup.enter)="AddItem(username.value)" (keydown.Backspace)="delText(username.value)" (input)="search(filter.value)"><br>
+    <!-- <input type="text" id="username" name="text" #username placeholder="add" (keyup.enter)="AddItem(username.value)" (keydown.Backspace)="delText(username.value)" (input)="Addtext($event)"><br> -->
+    <select (change)="Addtext($event) " class="mt-2">
+        <option (click)="username.value = i" value="{{i}}" *ngFor="let i of itemsArr">{{i}}</option>
+    </select><br>
+    <input type="button" value="Adduser" id="Add" (click)="adduser(username.value)">
+    <!-- <input type="button" value="Add" id="Add" (click)="AddItem(username.value)"> -->
+    <table class="table table-bordered text-center m-0" width="50%">
+        <tr>
+            <th>username</th>
+            <th>delete</th>
+        </tr>
+        <tr vlaue="user" *ngFor="let user of usr2">
+            <td>
+                {{user}}
+            </td>
+            <td>
+                <input type="button" value="delete" id="delete" (click)="remove(username.value)" style="height: 50px;">
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- 
+<ul id="list" #items>
+    <li>HTML</li> 
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>PHP</li>
+</ul> -->

@@ -1,0 +1,11 @@
+<!-- <ul *ngFor="let i of peopleByCountry">{{i.country}}
+    <li *ngFor="let j of i.people">{{j.name}}</li>
+</ul> -->
+
+
+<ul *ngFor="let i of peopleByCountry" [ngSwitch]="i.country">
+    <span *ngSwitchCase="'UK'" class="text-primary">{{i.country}}</span>
+    <span *ngSwitchCase="'US'" class="text-warning">{{i.country}}</span>
+    <span *ngSwitchCase="'MARS'" class="text-info">{{i.country}}</span>
+    <li *ngFor="let j of i.people">{{j.name}}</li>
+</ul>
