@@ -15,7 +15,6 @@ const routes: Routes = [
   {path:"new-product", component: NewProductComponent},
   {path:'', component: LoginFormsComponent},
   {path:"**", component: ErrorComponent}
-  
 ];
 
 @NgModule({

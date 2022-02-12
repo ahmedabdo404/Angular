@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PdetailsComponent } from './products/pdetails/pdetails.component';
 import { LoginFormsComponent } from './login-forms/login-forms.component';
 import { NewProductComponent } from './products/new-product/new-product.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,16 @@ import { NewProductComponent } from './products/new-product/new-product.componen
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    RouterModule.forRoot([
+      {path:"Products", component: ProductsComponent},
+      {path:"Pdetails/:id", component: PdetailsComponent},
+      {path:"user", component: UsersComponent},
+      {path:"login-forms", component: LoginFormsComponent},
+      {path:"new-product", component: NewProductComponent},
+      {path:'', component: LoginFormsComponent},
+      {path:"**", component: ErrorComponent}
+    ]),
+
     ReactiveFormsModule
   ],
   providers: [],
